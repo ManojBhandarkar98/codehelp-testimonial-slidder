@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+
 
 const Card = (props) => {
     const review = props.review;
@@ -25,21 +25,7 @@ const Card = (props) => {
             <div className='text-violet-400 mx-auto mt-5'>
                 <FaQuoteRight />
             </div>
-            <div className='flex text-3xl mt-5 gap-3 text-violet-400 font-bold text-center mx-auto'>
-                <button className='cursor-pointer hover:text-violet-500'>
-                    <FiChevronLeft />
-                </button>
 
-                <button className='cursor-pointer hover:text-violet-500'>
-                    <FiChevronRight />
-                </button>
-            </div>
-
-            <div className='mx-auto'>
-                <button className='bg-violet-400 hover:bg-violet-500 transition-all duration-200 cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg '>
-                    Surprize Me
-                </button>
-            </div>
         </div>
     )
 }
