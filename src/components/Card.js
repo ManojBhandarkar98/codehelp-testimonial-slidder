@@ -1,17 +1,18 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
+    const review = props.review;
     return (
         <div>
             <div>
-                <img>image</img>
+                <img src={review.image}></img>
             </div>
             <div>
-                <p>name</p>
-                <p>job</p>
+                <p>{review.name}</p>
+                <p>{review.job}</p>
             </div>
             <div>
-                <p>review</p>
+                <p>{review.text}</p>
             </div>
         </div>
     )
