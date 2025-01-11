@@ -14,7 +14,7 @@ const Testimonial = (props) => {
         }
     }
     function rightShiftHandler() {
-        if (index + 1 > reviews.length) {
+        if (index + 1 > reviews.length-1) {
             setIndex(0);
         }
         else {
@@ -27,7 +27,7 @@ const Testimonial = (props) => {
     }
     return (
         <div className='w-[85vw] md:w-[700px] bg-white flex flex-col justify-center items-center mt-10 p-10 transition-all duration-700 hover:shadow-xl rounded-xl'>
-            <Card review={reviews[0]} />
+            <Card review={reviews[index]} />
             <div className='flex text-3xl mt-5 gap-3 text-violet-400 font-bold text-center mx-auto'>
                 <button onClick={leftShiftHandler} className='cursor-pointer hover:text-violet-500'>
                     <FiChevronLeft />
@@ -38,7 +38,7 @@ const Testimonial = (props) => {
                 </button>
             </div>
 
-            <div className='mx-auto'>
+            <div className='mt-6'>
                 <button onClick={surpriseHandler} className='bg-violet-400 hover:bg-violet-500 transition-all duration-200 cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg '>
                     Surprize Me
                 </button>
